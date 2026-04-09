@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistem Absensi Sekolah</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="header">
+<button class="menu-btn" onclick="toggleSidebar()">☰</button>
+<span>Sistem Absensi Sekolah</span>
+</div>
+
+<div class="container">
+
+<div class="sidebar" id="sidebar">
+<ul>
+<li>Dashboard</li>
+<li>Data Siswa</li>
+<li>Absensi</li>
+<li>Laporan</li>
+<li>Logout</li>
+</ul>
+</div>
+
+<div class="content">
+
+<div class="card">
+
+<h3>Input Absensi</h3>
+
+<select id="nama">
+<option value="">Pilih Siswa</option>
+</select>
+
+<select id="status">
+<option value="">Pilih Status</option>
+<option value="Hadir">Hadir</option>
+<option value="Izin">Izin</option>
+<option value="Sakit">Sakit</option>
+<option value="Alpha">Alpha</option>
+</select>
+
+<button onclick="tambahData()">Tambah</button>
+
+</div>
+
+<div class="card">
+
+<h3>Data Absensi</h3>
+
+<table>
+
+<thead>
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>Status</th>
+<th>Aksi</th>
+</tr>
+</thead>
+
+<tbody id="tabel">
+</tbody>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h3>Grafik Kehadiran</h3>
+
+<div class="chart">
+<div id="hadirBar" class="bar hadir">
+<span id="hadirText">0%</span>
+</div>
+</div>
+
+<div class="chart">
+<div id="izinBar" class="bar izin">
+<span id="izinText">0%</span>
+</div>
+</div>
+
+<div class="chart">
+<div id="sakitBar" class="bar sakit">
+<span id="sakitText">0%</span>
+</div>
+</div>
+
+<div class="chart">
+<div id="alphaBar" class="bar alpha">
+<span id="alphaText">0%</span>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="../javascript/absen.js"></script>
+
+</body>
+</html>
